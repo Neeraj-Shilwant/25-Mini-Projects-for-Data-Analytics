@@ -1,0 +1,5 @@
+for cluster in clusters.groups:
+    f= open('clusters'+str(cluster)+'.csv','w')
+    data = clusters.get_group(cluster)[['Review','date','Location']]
+    f.write(data.to_csv())
+    f.close()
